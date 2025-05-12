@@ -1,17 +1,16 @@
 {
   "name": "54-grupe-movies",
   "version": "1.0.0",
-  "type": "module",
   "main": "index.js",
-  
   "scripts": {
-    "dev" : "node --watch ./src/index.js",
+    "dev": "node --watch ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "dependencies": {
     "express": "^5.1.0"
   }
