@@ -22,9 +22,10 @@ export class PageTemplate {
     header() {
         const menu = [
             { href: '/', text: 'Home' },
-            { href: '/about', text: 'About us' },
-            { href: '/users', text: 'Users' },
-            { href: '/add-text', text: 'Add text' },
+            { href: '/movies', text: 'Movies' },
+            { href: '/movies-by-category', text: 'Categories' },
+            { href: '/login', text: 'Login' },
+            { href: '/register', text: 'Register' },
         ];
 
         let menuHTML = '';
