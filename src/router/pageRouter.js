@@ -1,5 +1,5 @@
 import express from 'express';
-import { PageHome } from '../src/pages/PageHome.js';
+import { PageHome } from '../pages/PageHome.js';
 import { Page404 } from '../pages/Page404.js';
 import { PageMovies } from '../pages/PageMovies.js';
 import { PageCategories } from '../pages/PageCategories.js';
