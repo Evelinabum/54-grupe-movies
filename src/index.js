@@ -9,6 +9,6 @@ app.use(express.static('public'));
 app.use('/', pageRouter);
 app.use('/', apiRouter);
 
-app.listen(5412, () => {
-    console.log(`Serveris: http://localhost:5412`);
+app.listen(PORT, () => {
+    console.log(`Serveris: http://localhost:${PORT}`);
 });
