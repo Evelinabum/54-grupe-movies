@@ -1,5 +1,6 @@
 export class PageTemplate {
-    constructor() {
+    constructor(req) {
+        this.req = req;
         this.activeMenuIndex = -1;
         this.pageJS = '';
     }
@@ -22,7 +23,7 @@ export class PageTemplate {
     }
 
     header() {
-        const userIsLoggedIn = false;
+        const userIsLoggedIn = this.req.headers.cookie !== undefined;
 
         const publicMenu = [
             { href: '/', text: 'Home' },
@@ -63,7 +64,7 @@ export class PageTemplate {
             </div>`;
     }
 
-    main() {
+    async main() {
         return '<main>DEMO CONTENT</main>';
     }
 
@@ -104,14 +105,14 @@ export class PageTemplate {
         }
     }
 
-    render() {
+    async render() {
         return `
             <!DOCTYPE html>
             <html lang="en">
             ${this.head()}
             <body>
                 ${this.header()}
-                ${this.main()}
+                ${await this.main()}
                 ${this.footer()}
                 ${this.script()}
             </body>

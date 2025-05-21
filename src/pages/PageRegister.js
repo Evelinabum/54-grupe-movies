@@ -1,12 +1,13 @@
 import { PageTemplate } from "../templates/PageTemplate.js";
 
 export class PageRegister extends PageTemplate {
-    constructor() {
-        super();
+    constructor(req) {
+        super(req);
         this.pageJS = 'register';
+        this.activeMenuIndex = 4;
     }
 
-    main() {
+    async main() {
         return `
             <main>
                 <div class="container">
