@@ -5,3 +5,4 @@ export const connection = await mysql.createConnection({
     user : 'root',
     database : '54gr_movies',
 });
+
