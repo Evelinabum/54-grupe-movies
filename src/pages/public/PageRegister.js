@@ -1,4 +1,4 @@
-import { PageTemplate } from "../templates/PageTemplate.js";
+import { PageTemplate } from "../../templates/PageTemplate.js";
 
 export class PageRegister extends PageTemplate {
     constructor(req) {
@@ -37,4 +37,4 @@ export class PageRegister extends PageTemplate {
                 </div>
             </main>`;
     }
-}
+} 
