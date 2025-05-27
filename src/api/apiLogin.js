@@ -1,4 +1,3 @@
-
 import { connection } from "../db.js";
 import { IsValid } from "../lib/IsValid.js";
 import { randomString } from "../lib/randomString.js";
@@ -74,5 +73,6 @@ export async function apiLogin(req, res) {
         .json({
             status: 'success',
             msg: 'Jus buvote sekmingai prijungti prie sistemos',
+            redirectTo: '/admin',
         });
 }

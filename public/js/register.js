@@ -6,6 +6,8 @@ const passwordDOM = document.getElementById('password');
 if (formDOM) {
     formDOM.addEventListener('submit', event => {
         event.preventDefault();
+        alertDOM.classList.add('d-none');
+        alertDOM.innerText = '';
 
         const data = {
             email: emailDOM.value,
@@ -20,7 +22,20 @@ if (formDOM) {
             body: JSON.stringify(data),
         })
             .then(data => data.json())
-            .then(data => console.log(data))
+            .then(data => {
+                if (data.status === 'error') {
+                    alertDOM.innerText = data.msg;
+                    alertDOM.classList.remove('d-none', 'alert-success');
+                    alertDOM.classList.add('alert-danger');
+                }
+                if (data.status === 'success') {
+                    alertDOM.innerText = data.msg;
+                    alertDOM.classList.remove('d-none', 'alert-danger');
+                    alertDOM.classList.add('alert-success');
+
+                    location.href = '/login';
+                }
+            })
             .catch(err => console.log(err));
     });
 }

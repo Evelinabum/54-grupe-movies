@@ -1,4 +1,4 @@
-import { categoriesList } from "../../ponents/categoriesList.js";
+import { categoriesList } from "../../components/categoriesList.js";
 import { getAllCategories } from "../../getAllCategories.js";
 import { PageTemplate } from "../../templates/PageTemplate.js";
 
